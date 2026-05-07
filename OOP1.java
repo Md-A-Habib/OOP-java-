@@ -32,7 +32,7 @@ class Student {
     }// without this constructor code will run becasue by default java will perform the task of that constructor if we don't write it.
 }
 
-public class OOP {
+public class OOP1 {
     public static void main(String args[]){
      /*
         Pen pen1 = new Pen(); // creating object
