@@ -8,7 +8,7 @@
             Derived Class
                 
      */
-
+ 
 class Shape{
     public void area(){  // base class
         System.out.println("Display area");
