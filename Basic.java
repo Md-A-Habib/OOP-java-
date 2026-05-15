@@ -137,4 +137,61 @@ public class Main {
 
     }
 }
+
+
+6️⃣Access Characters
+String name = "Habib";
+
+System.out.println(name.charAt(0));
+
+7️⃣Compare String
+if(name.equals("Habib"))  // if(name == "Habib")
+if(!name.equals("Habib")) // if(name != "Habib")
+
+8️⃣Substring
+String name = "Habib";
+
+System.out.println(name.substring(1, 4));
+
+Output: abi
+
+9️⃣Replace character
+String name = "Habib";
+System.out.println(name.replace('a', 'o'));
+
+Output: Hobib
+
+1️⃣0️⃣ Loop Through String
+String name= "Habib";
+for(int i=0; i<name.length(); i++){     // size function not work in java
+    System.out.println(name.charAt(i));
+}
+
+Output:
+H
+a
+b
+i
+b
+
+All String concept
+| Topic            | Syntax / Example               | Meaning                       |
+| ---------------- | ------------------------------ | ----------------------------- |
+| String creation  | `String name = "Habib";`       | Store text                    |
+| Input (word)     | `sc.next();`                   | Take single word input        |
+| Input (line)     | `sc.nextLine();`               | Take full sentence input      |
+| String length    | `name.length()`                | Count characters              |
+| Character access | `name.charAt(i)`               | Get character at index        |
+| Index start      | `0,1,2,...`                    | String indexing starts from 0 |
+| Compare strings  | `name.equals("Habib")`         | Check equality                |
+| Not equal        | `!name.equals("Habib")`        | Check not equal               |
+| Wrong compare    | `name == "Habib"`              | compares memory (not value)   |
+| Uppercase        | `name.toUpperCase()`           | convert to capital letters    |
+| Lowercase        | `name.toLowerCase()`           | convert to small letters      |
+| Concatenation    | `"Hello " + name`              | join strings                  |
+| Substring        | `name.substring(a,b)`          | extract part of string        |
+| Replace          | `name.replace('a','o')`        | replace characters            |
+| Loop string      | `for(i=0;i<name.length();i++)` | access each character         |
+| Immutable string | cannot change original string  | creates new object            |
+
 */
