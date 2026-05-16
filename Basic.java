@@ -8,7 +8,7 @@
 
 public class Basic {
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
 
         System.out.println("Hello");
 
@@ -195,3 +195,213 @@ All String concept
 | Immutable string | cannot change original string  | creates new object            |
 
 */
+
+
+
+import java.util.*;   // Scanner, Arrays, ArrayList, Vector, Collections
+
+public class Basic {
+
+    // ---------- METHOD / FUNCTION ----------
+    static int sum(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+
+        // ---------- INPUT ----------
+        Scanner sc = new Scanner(System.in);
+
+        // ---------- VARIABLES ----------
+        int x = 10;
+        double d = 3.5;
+        char ch = 'A';
+        boolean ok = true;
+        String name = "Habib";
+
+        // ---------- OUTPUT ----------
+        System.out.println("Hello Java"); // print with new line
+        System.out.print("Same Line ");   // print without new line
+        System.out.println("Output");
+
+        // ---------- OPERATORS ----------
+        System.out.println(x + 5); // addition
+        System.out.println(x - 5); // subtraction
+        System.out.println(x * 2); // multiplication
+        System.out.println(x / 2); // division
+        System.out.println(x % 3); // remainder
+
+        // ---------- COMPARISON ----------
+        System.out.println(x > 5);   // true
+        System.out.println(x == 10); // true
+        System.out.println(x != 5);  // true
+
+        // ---------- IF ELSE ----------
+        if(x % 2 == 0) {
+            System.out.println("Even");
+        }
+        else {
+            System.out.println("Odd");
+        }
+
+        // ---------- FOR LOOP ----------
+        for(int i = 0; i < 3; i++) {
+            System.out.println(i);
+        }
+
+        // ---------- WHILE LOOP ----------
+        int i = 0;
+
+        while(i < 3) {
+            System.out.println(i);
+            i++;
+        }
+
+        // ---------- METHOD CALL ----------
+        System.out.println(sum(5, 10));
+
+        // =========================================================
+        // ====================== STRING ===========================
+        // =========================================================
+
+        String s = "Habib";
+
+        System.out.println(s.length());          // string length
+        System.out.println(s.charAt(0));         // first character
+        System.out.println(s.toUpperCase());     // uppercase
+        System.out.println(s.toLowerCase());     // lowercase
+        System.out.println(s.substring(1,4));    // substring
+        System.out.println(s.replace('a','o'));  // replace character
+        System.out.println(s.contains("bi"));    // check substring
+        System.out.println(s.indexOf('b'));      // first index
+        System.out.println(s.isEmpty());         // empty or not
+
+        // string compare
+        if(s.equals("Habib")) {
+            System.out.println("Matched");
+        }
+
+        // not equal
+        if(!s.equals("Ali")) {
+            System.out.println("Not Equal");
+        }
+
+        // =========================================================
+        // ======================= ARRAY ===========================
+        // =========================================================
+
+        int[] arr = {5, 2, 9, 1};
+
+        System.out.println(arr.length); // array size
+
+        System.out.println(arr[0]); // first element
+
+        // loop through array
+        for(int j = 0; j < arr.length; j++) {
+            System.out.print(arr[j] + " ");
+        }
+
+        System.out.println();
+
+        // sort array
+        Arrays.sort(arr);
+
+        System.out.println(Arrays.toString(arr));
+
+        // fill array with same value
+        Arrays.fill(arr, 0);
+
+        System.out.println(Arrays.toString(arr));
+
+        // =========================================================
+        // ===================== ARRAYLIST =========================
+        // =========================================================
+
+        ArrayList<Integer> list = new ArrayList<>();
+
+        list.add(10); // insert
+        list.add(20);
+        list.add(30);
+
+        System.out.println(list);
+
+        System.out.println(list.get(1)); // access element
+
+        list.set(1, 50); // update
+
+        System.out.println(list);
+
+        list.remove(0); // delete element
+
+        System.out.println(list);
+
+        System.out.println(list.size()); // size
+
+        System.out.println(list.contains(50)); // check exists
+
+        System.out.println(list.isEmpty()); // empty or not
+
+        Collections.sort(list); // sort
+
+        System.out.println(list);
+
+        Collections.reverse(list); // reverse
+
+        System.out.println(list);
+
+        // enhanced for loop
+        for(int val : list) {
+            System.out.println(val);
+        }
+
+        // =========================================================
+        // ======================== VECTOR =========================
+        // =========================================================
+
+        Vector<Integer> v = new Vector<>();
+
+        v.add(100); // insert
+        v.add(200);
+        v.add(300);
+
+        System.out.println(v);
+
+        System.out.println(v.get(0)); // access
+
+        v.set(0, 500); // update
+
+        System.out.println(v);
+
+        v.remove(1); // delete
+
+        System.out.println(v);
+
+        System.out.println(v.size()); // size
+
+        Collections.sort(v); // sort
+
+        System.out.println(v);
+
+        Collections.reverse(v); // reverse
+
+        System.out.println(v);
+
+        // =========================================================
+        // ================= BREAK & CONTINUE ======================
+        // =========================================================
+
+        for(int k = 1; k <= 5; k++) {
+
+            if(k == 3) {
+                continue; // skip 3
+            }
+
+            if(k == 5) {
+                break; // stop loop
+            }
+
+            System.out.println(k);
+        }
+
+    }
+}
